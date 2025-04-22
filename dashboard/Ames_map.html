@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a353d7e2b208abff3501b4cc12a9de6b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a353d7e2b208abff3501b4cc12a9de6b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a353d7e2b208abff3501b4cc12a9de6b = L.map(
+                "map_a353d7e2b208abff3501b4cc12a9de6b",
+                {
+                    center: [42.030806089293755, -93.6304970070205],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2b219adffa3988abe5769b3fa47edccb = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_2b219adffa3988abe5769b3fa47edccb.addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var marker_169ff386d6625fdc862e9527c4251f48 = L.marker(
+                [42.0348485, -93.58827338],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_d13e4365c9700865c69e962943fcf7bd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_169ff386d6625fdc862e9527c4251f48.bindTooltip(
+                `<div>
+                     MercyOne Iowa Heart Center Ames
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_169ff386d6625fdc862e9527c4251f48.setIcon(icon_d13e4365c9700865c69e962943fcf7bd);
+            
+    
+            var marker_b03d80a9e9cdcd63e811851a85759d9c = L.marker(
+                [42.02250376, -93.66627287],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_bacaabea1508f10264e0d17a3298dd6f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b03d80a9e9cdcd63e811851a85759d9c.bindTooltip(
+                `<div>
+                     Primary Health Care Medical & Dental - Ames
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b03d80a9e9cdcd63e811851a85759d9c.setIcon(icon_bacaabea1508f10264e0d17a3298dd6f);
+            
+    
+            var marker_8947d95ee525ad3b197617e5e7e96e27 = L.marker(
+                [42.02150549, -93.66788421],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_11aba4f1bae5d4ce89b9bd8c58d1da3c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_8947d95ee525ad3b197617e5e7e96e27.bindTooltip(
+                `<div>
+                     McFarland Clinic - West Ames Office
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8947d95ee525ad3b197617e5e7e96e27.setIcon(icon_11aba4f1bae5d4ce89b9bd8c58d1da3c);
+            
+    
+            var marker_fac66407addcc9ba2f71316bd8f5728e = L.marker(
+                [42.02575566, -93.65389514],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_8ba4359fca9d801b401b5ca3a775cf67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_fac66407addcc9ba2f71316bd8f5728e.bindTooltip(
+                `<div>
+                     Thielen Student Health Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fac66407addcc9ba2f71316bd8f5728e.setIcon(icon_8ba4359fca9d801b401b5ca3a775cf67);
+            
+    
+            var marker_22dc07c66bb3684fa8256736b43dc189 = L.marker(
+                [42.02116071, -93.65148903],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_9d8f6863570b77f496a08f1cb9b4d19e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_22dc07c66bb3684fa8256736b43dc189.bindTooltip(
+                `<div>
+                     Planned Parenthood - Ames Health Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_22dc07c66bb3684fa8256736b43dc189.setIcon(icon_9d8f6863570b77f496a08f1cb9b4d19e);
+            
+    
+            var marker_aa5a8245735f9c913fb8fe8cc56be3d4 = L.marker(
+                [41.99087448, -93.63782661],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_36c3df0fd05822d1133647fd04dbd688 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_aa5a8245735f9c913fb8fe8cc56be3d4.bindTooltip(
+                `<div>
+                     McFarland Clinic - South Ames Office
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aa5a8245735f9c913fb8fe8cc56be3d4.setIcon(icon_36c3df0fd05822d1133647fd04dbd688);
+            
+    
+            var marker_50b3611e9f585a654197d3378b6ea5dd = L.marker(
+                [41.99965164, -93.64121939],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_52467a1683c2b441c6974a793e58f0e2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_50b3611e9f585a654197d3378b6ea5dd.bindTooltip(
+                `<div>
+                     UnityPoint Health - Eyerly Ball - Ames
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_50b3611e9f585a654197d3378b6ea5dd.setIcon(icon_52467a1683c2b441c6974a793e58f0e2);
+            
+    
+            var marker_547199ba78ce96dabf45599881aaa9ec = L.marker(
+                [42.00762834, -93.60767932],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_b7cc1e96a0215c5ec0554f2b8778bf44 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_547199ba78ce96dabf45599881aaa9ec.bindTooltip(
+                `<div>
+                     Richmond Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_547199ba78ce96dabf45599881aaa9ec.setIcon(icon_b7cc1e96a0215c5ec0554f2b8778bf44);
+            
+    
+            var marker_3e3423ad102ddc8c543096028bb9b9a6 = L.marker(
+                [42.03277405, -93.61160342],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_3289e23e4b95ace88d6db9dddc212753 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_3e3423ad102ddc8c543096028bb9b9a6.bindTooltip(
+                `<div>
+                     Mary Greeley Medical Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3e3423ad102ddc8c543096028bb9b9a6.setIcon(icon_3289e23e4b95ace88d6db9dddc212753);
+            
+    
+            var marker_2108708f58723cd3faa7897d397d37d5 = L.marker(
+                [42.0182295, -93.67767227],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_912714a0ae999d5e6eff670bb561fad3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_2108708f58723cd3faa7897d397d37d5.bindTooltip(
+                `<div>
+                     Israel Family Hospice House
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2108708f58723cd3faa7897d397d37d5.setIcon(icon_912714a0ae999d5e6eff670bb561fad3);
+            
+    
+            var marker_2fc39d516c9f90a929d6cd5a41ff5b59 = L.marker(
+                [42.00880229, -93.6240573],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_8aceffdd592e7c03d41f4d4806fbd338 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_2fc39d516c9f90a929d6cd5a41ff5b59.bindTooltip(
+                `<div>
+                     Ames Christian School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2fc39d516c9f90a929d6cd5a41ff5b59.setIcon(icon_8aceffdd592e7c03d41f4d4806fbd338);
+            
+    
+            var marker_9b3e840d0b2e1cd6412da8da6c8571e3 = L.marker(
+                [42.0500032, -93.62832394],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_9c691e69b8dcfd8cca3523db1bccf5ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_9b3e840d0b2e1cd6412da8da6c8571e3.bindTooltip(
+                `<div>
+                     St. Cecilia Catholic School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9b3e840d0b2e1cd6412da8da6c8571e3.setIcon(icon_9c691e69b8dcfd8cca3523db1bccf5ff);
+            
+    
+            var marker_817306874ca4b164268ffb8dd0a7cd51 = L.marker(
+                [42.0339747, -93.67713176],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_97236c266951871becfbe2fd66b13c57 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_817306874ca4b164268ffb8dd0a7cd51.bindTooltip(
+                `<div>
+                     Sawyer Elementary School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_817306874ca4b164268ffb8dd0a7cd51.setIcon(icon_97236c266951871becfbe2fd66b13c57);
+            
+    
+            var marker_630f28dd29d5c22a616d564410278962 = L.marker(
+                [41.9902326, -93.60088499],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_9c5182c95a9147617b68d19ea2b8939b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_630f28dd29d5c22a616d564410278962.bindTooltip(
+                `<div>
+                     Mitchell Elementary School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_630f28dd29d5c22a616d564410278962.setIcon(icon_9c5182c95a9147617b68d19ea2b8939b);
+            
+    
+            var marker_2b1c74bcf287fd32bad2fb6c6a3db293 = L.marker(
+                [42.01584744, -93.68557969],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_9e3a8edbe371f490fd92354bf0b59f18 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_2b1c74bcf287fd32bad2fb6c6a3db293.bindTooltip(
+                `<div>
+                     Edwards Elementary School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2b1c74bcf287fd32bad2fb6c6a3db293.setIcon(icon_9e3a8edbe371f490fd92354bf0b59f18);
+            
+    
+            var marker_b62a1449c7ff8078dbfd292ac55a45c2 = L.marker(
+                [42.04032008, -93.61450549],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_2660826609fe09f5d959a762330c4739 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_b62a1449c7ff8078dbfd292ac55a45c2.bindTooltip(
+                `<div>
+                     Meeker Elementary School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b62a1449c7ff8078dbfd292ac55a45c2.setIcon(icon_2660826609fe09f5d959a762330c4739);
+            
+    
+            var marker_fe624fc380a8dff48f54ac002e7ab520 = L.marker(
+                [42.04286966, -93.62719316],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_c525b96b009958c58c3a9524b856debd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_fe624fc380a8dff48f54ac002e7ab520.bindTooltip(
+                `<div>
+                     Fellows Elementary School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fe624fc380a8dff48f54ac002e7ab520.setIcon(icon_c525b96b009958c58c3a9524b856debd);
+            
+    
+            var marker_08d67b737c09f35439173aaa07cd9c08 = L.marker(
+                [42.01329553, -93.6716591],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_f8020af269711b9fc0534af42d55088f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_08d67b737c09f35439173aaa07cd9c08.bindTooltip(
+                `<div>
+                     Ames Middle School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_08d67b737c09f35439173aaa07cd9c08.setIcon(icon_f8020af269711b9fc0534af42d55088f);
+            
+    
+            var marker_90d9dd7c3729feb99adf002e80fabc50 = L.marker(
+                [42.04002114, -93.63529859],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_14078925070660dd50f1d5f887362952 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_90d9dd7c3729feb99adf002e80fabc50.bindTooltip(
+                `<div>
+                     Ames High School
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_90d9dd7c3729feb99adf002e80fabc50.setIcon(icon_14078925070660dd50f1d5f887362952);
+            
+    
+            var marker_443fc4b82c389aa7b73830bfc286b197 = L.marker(
+                [42.00787266, -93.61556526],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_879eaa523ce6d7e3bef80dca2c90646a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_443fc4b82c389aa7b73830bfc286b197.bindTooltip(
+                `<div>
+                     Obria Medical Clinics - Ames
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_443fc4b82c389aa7b73830bfc286b197.setIcon(icon_879eaa523ce6d7e3bef80dca2c90646a);
+            
+    
+            var marker_279c1a6472fa8e2972ce3ae4248ee127 = L.marker(
+                [42.03183023, -93.61022782],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_29454a84b859626584a15364ff0c2afb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_279c1a6472fa8e2972ce3ae4248ee127.bindTooltip(
+                `<div>
+                     McFarland Clinic - Family Medicine East Office
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_279c1a6472fa8e2972ce3ae4248ee127.setIcon(icon_29454a84b859626584a15364ff0c2afb);
+            
+    
+            var marker_27dab898569547bd6bb3ada7cdf29948 = L.marker(
+                [42.0337054, -93.61209734],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_9fe647769e27b97dce804edc31479980 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_27dab898569547bd6bb3ada7cdf29948.bindTooltip(
+                `<div>
+                     McFarland Clinic - 1215 Duff Avenue Office
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_27dab898569547bd6bb3ada7cdf29948.setIcon(icon_9fe647769e27b97dce804edc31479980);
+            
+    
+            var marker_738ffc39e712aa0d24c2e91b9785bc20 = L.marker(
+                [42.0580328, -93.64662111],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_f27a4de3ce4fb629e9f06d02be0d67a7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_738ffc39e712aa0d24c2e91b9785bc20.bindTooltip(
+                `<div>
+                     McFarland Clinic - North Ames Office
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_738ffc39e712aa0d24c2e91b9785bc20.setIcon(icon_f27a4de3ce4fb629e9f06d02be0d67a7);
+            
+    
+            var marker_a2c63b7d2867ce1760cb036800a9a0d7 = L.marker(
+                [42.04604383, -93.62161776],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_aed0997a80211d29d6799872bcca1313 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_a2c63b7d2867ce1760cb036800a9a0d7.bindTooltip(
+                `<div>
+                     Catalyst Clinic
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a2c63b7d2867ce1760cb036800a9a0d7.setIcon(icon_aed0997a80211d29d6799872bcca1313);
+            
+    
+            var marker_ce27ccd6358bb914e3b820f9d2837b95 = L.marker(
+                [42.00746889, -93.6178906],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_ba406804563cf1f2480eb1ca391c8cd6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_ce27ccd6358bb914e3b820f9d2837b95.bindTooltip(
+                `<div>
+                     Hemken Family Medicine
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ce27ccd6358bb914e3b820f9d2837b95.setIcon(icon_ba406804563cf1f2480eb1ca391c8cd6);
+            
+    
+            var marker_19600d88fa258b3f4954d5c3c33656f1 = L.marker(
+                [42.02993355, -93.64836256],
+                {
+}
+            ).addTo(map_a353d7e2b208abff3501b4cc12a9de6b);
+        
+    
+            var icon_6264f48beb582da6aad8066a02d42642 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "user-md",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_19600d88fa258b3f4954d5c3c33656f1.bindTooltip(
+                `<div>
+                     Occupational Medicine
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_19600d88fa258b3f4954d5c3c33656f1.setIcon(icon_6264f48beb582da6aad8066a02d42642);
+            
+</script>
+</html>
