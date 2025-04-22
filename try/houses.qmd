@@ -1,0 +1,30 @@
+---
+title: "No.1 공인중개사"
+author: "어디갈까?"
+format:
+  dashboard:
+    theme: journal
+    nav-buttons:
+      - icon: github
+        href: https://github.com/j8e2s8/Hongdae-Syndrome.git
+    scrolling: true
+logo: "hongdae.png"
+---
+
+# 큰 페이지
+
+## 일반 하위 페이지
+
+```{python}
+#| title: 명칭1 (이 줄 생략 가능)
+
+from IPython.display import IFrame
+IFrame('https://www.gunpolib.go.kr/',width='100%', height='500px')
+```
+
+```{python}
+#| title: 명칭2 (이 줄 생략 가능)
+
+from IPython.display import IFrame
+IFrame('https://j8e2s8.github.io/mywebsite/',width='100%', height='500px')
+```
