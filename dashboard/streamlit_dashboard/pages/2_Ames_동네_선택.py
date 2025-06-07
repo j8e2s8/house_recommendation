@@ -6,8 +6,16 @@ import os
 # 데이터 불러오기
 #os.chdir('c:/Users/USER/Documents/D/LS_bigdataschool_3/house_recommendation')
 #os.path.abspath(os.path.join(__file__,'..','..'))
-eda_df = pd.read_csv('../../data/eda_house.csv')
-score_df = pd.read_csv('../../data/score_house.csv')
+# eda_df = pd.read_csv('../../data/eda_house.csv')
+# score_df = pd.read_csv('../../data/score_house.csv')
+
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+DATA_PATH1 = os.path.join(BASE_DIR, 'data', 'eda_house.csv')
+DATA_PATH2 = os.path.join(BASE_DIR, 'data', 'score_house.csv')
+
+
+eda_df = pd.read_csv(DATA_PATH1)
+score_df = pd.read_csv(DATA_PATH2)
 
 # 페이지 설정
 st.set_page_config(page_title="Ames 동네 선택", page_icon="📌", layout="wide")
