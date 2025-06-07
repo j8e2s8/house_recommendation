@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 
 
 # 데이터 불러오기
-house_df = pd.read_csv('../data/houseprice-with-lonlat.csv')
-school_hospital_df = pd.read_csv('../data/aims_school_hospital.csv')
+house_df = pd.read_csv('../data/raw/houseprice-with-lonlat.csv')
+school_hospital_df = pd.read_csv('../data/raw/aims_school_hospital.csv')
 
 school_hospital_df['type'].unique()  # 'medical', 'school'
 house_df.head(5)
@@ -26,7 +26,7 @@ color_dict = {
 
 
 # 지도 만들기
-m = folium.Map(location=[42.030806089293755, -93.6304970070205], zoom_start=13, tiles='CartoDB positron')
+m = folium.Map(location=[42.030806089293755, -93.6304970070205], zoom_start=12, tiles='CartoDB positron')
 
 # 지도에 마크 표시
 for _, row in school_hospital_df.iterrows():
@@ -46,10 +46,10 @@ for _, row in school_hospital_df.iterrows():
 
 for _, row in house_df.iterrows():
     select_color = color_dict.get(row['Neighborhood'], 'grey')
-    folium.CircleMarker(
+    folium.Circle(
         location=[row['Latitude'], row['Longitude']],
-        tooltip=f'{row['Unnamed: 0']}번째 집',
-        radius = 3,
+        tooltip=f'{row['Unnamed: 0']}번째 집 : {row['Sale_Price']}달러',
+        radius = 20,
         color = select_color,
         opacity = 0.5,    
         fill = True,
@@ -57,3 +57,6 @@ for _, row in house_df.iterrows():
 
 # 지도 저장하기
 m.save('Ames_map.html')
+
+
+

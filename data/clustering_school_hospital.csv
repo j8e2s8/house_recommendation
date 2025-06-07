@@ -1,0 +1,27 @@
+Name,type,Latitude,Longitude,cluster,cluster_minsample2_op,cluster_minsample3_op,cluster_minsample4_op,cluster_minsample5_op
+MercyOne Iowa Heart Center Ames,medical,42.0348485,-93.58827338,-1,-1,-1,-1,-1
+Primary Health Care Medical & Dental - Ames,medical,42.02250376,-93.66627287,0,0,-1,-1,0
+McFarland Clinic - West Ames Office,medical,42.02150549,-93.66788421,0,0,-1,-1,0
+Thielen Student Health Center,medical,42.02575566,-93.65389514,1,-1,-1,-1,0
+Planned Parenthood - Ames Health Center,medical,42.02116071,-93.65148903,1,-1,-1,-1,0
+McFarland Clinic - South Ames Office,medical,41.99087448,-93.63782661,-1,-1,-1,-1,-1
+UnityPoint Health - Eyerly Ball - Ames,medical,41.99965164,-93.64121939,-1,-1,-1,-1,-1
+Richmond Center,medical,42.00762834,-93.60767932,2,-1,-1,1,-1
+Mary Greeley Medical Center,medical,42.03277405,-93.61160342,3,1,0,2,0
+Israel Family Hospice House,medical,42.0182295,-93.67767227,4,-1,-1,-1,0
+Ames Christian School,school,42.00880229,-93.6240573,2,-1,1,1,-1
+St. Cecilia Catholic School,school,42.0500032,-93.62832394,5,-1,-1,0,0
+Sawyer Elementary School,school,42.0339747,-93.67713176,-1,-1,-1,-1,0
+Mitchell Elementary School,school,41.9902326,-93.60088499,-1,-1,-1,-1,-1
+Edwards Elementary School,school,42.01584744,-93.68557969,4,-1,-1,-1,0
+Meeker Elementary School,school,42.04032008,-93.61450549,3,-1,-1,2,0
+Fellows Elementary School,school,42.04286966,-93.62719316,5,-1,-1,0,0
+Ames Middle School,school,42.01329553,-93.6716591,4,-1,-1,-1,0
+Ames High School,school,42.04002114,-93.63529859,5,-1,-1,0,0
+Obria Medical Clinics - Ames,medical,42.00787266,-93.61556526,2,2,1,1,-1
+McFarland Clinic - Family Medicine East Office,medical,42.03183023,-93.61022782,3,1,0,2,0
+McFarland Clinic - 1215 Duff Avenue Office,medical,42.0337054,-93.61209734,3,1,0,2,0
+McFarland Clinic - North Ames Office,medical,42.0580328,-93.64662111,-1,-1,-1,-1,-1
+Catalyst Clinic,medical,42.04604383,-93.62161776,5,-1,-1,0,0
+Hemken Family Medicine,medical,42.00746889,-93.6178906,2,2,1,1,-1
+Occupational Medicine,medical,42.02993355,-93.64836256,1,-1,-1,-1,0
