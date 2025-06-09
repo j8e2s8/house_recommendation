@@ -1,7 +1,4 @@
 import streamlit as st
-import os
-
-os.chdir('c:/Users/USER/Documents/D/LS_bigdataschool_3/house_recommendation')
 
 # 페이지 설정
 st.set_page_config(page_title="결론", page_icon="💡", layout="wide")

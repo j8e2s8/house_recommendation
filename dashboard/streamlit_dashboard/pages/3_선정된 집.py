@@ -4,8 +4,7 @@ import numpy as np
 import os
 
 # 데이터 불러오기
-os.chdir('c:/Users/USER/Documents/D/LS_bigdataschool_3/house_recommendation')
-score_df = pd.read_csv('./data/score_house.csv')
+score_df = pd.read_csv('data/score_house.csv')
 score_df = score_df.rename(columns={'Unnamed: 0':'house_index'})
 
 
