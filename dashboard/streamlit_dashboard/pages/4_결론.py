@@ -10,7 +10,7 @@ st.title("💡 결론")
 
 st.write('---')
 
-st.subheader('top5 선정된 집의 가격 확인')
+st.header('top5 선정된 집의 가격 확인')
 
 st.image("code/houseprice.png", caption="집 가격 분포와 선정된 top5 집의 가격 정도")
 
