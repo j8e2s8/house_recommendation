@@ -31,9 +31,6 @@ with col2:
 ---''')
   st.write('\n')
   st.write('\n')
-  st.write('\n')
-  st.write('\n')
-  st.write('\n')
   st.write('''
 \n 중요하게 생각하는 요소 : 
 \n \- 집 근처에 학교와 병원이 밀집되어 있는가.
