@@ -28,5 +28,5 @@ st.write('**2등 집이 조건도 좋고, 가격면에서도 좋아 보입니다
 st.write('---')
 
 st.header('2등 집 위치 확인')
-with open('dashboard/img/inal_house.html','r',encoding='utf-8') as f:
+with open('dashboard/img/final_house.html','r',encoding='utf-8') as f:
     st.components.v1.html(f.read(), height=800, scrolling=False)
