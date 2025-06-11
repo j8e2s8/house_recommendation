@@ -27,7 +27,7 @@ st.write(score_df[(score_df['cluster']!=-1)&((score_df['Fence']=='Minimum_Privac
 
 # -----------
 st.subheader('선정된 집 확인')
-with open('dashboard/selected_house.html','r',encoding='utf-8') as f:
+with open('dashboard/img/selected_house.html','r',encoding='utf-8') as f:
     st.components.v1.html(f.read(), height=800, scrolling=False)
 
 

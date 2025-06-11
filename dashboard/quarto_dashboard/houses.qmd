@@ -1,0 +1,284 @@
+---
+title: "어디로 이사 갈까?"
+author: "No.1 공인중개사"
+format:
+  dashboard:
+    page-layout: full
+    layout: grid
+    theme: journal
+    nav-buttons:
+      - icon: github
+        href: https://github.com/j8e2s8/Hongdae-Syndrome.git
+    scrolling: true
+logo: "hongdae.png"
+---
+
+```{python}
+import os
+os.chdir('c:/Users/USER/Documents/D/LS_bigdataschool_3/house_recommendation/dashboard')
+```
+
+# 개요
+
+## Sidebar {.sidebar}
+
+### 팀 : No.1 공인중개사
+
+- **조원**
+  - 윤대웅, 이다경, 장일준, 정은서
+- **한 마디**
+  - 우린 멋져
+
+### 내용
+
+- **주제**
+  - Ames 내 동네 선정 후 조건에 맞는 집 추천
+- **데이터**
+  - [캐글 - Ames 집 원본 데이터](https://github.com/j8e2s8/Hongdae-Syndrome/blob/main/data/kaggle/houseprice/houseprice-with-lonlat.csv)
+  - [Ames 학교와 병원 위치 데이터](https://github.com/j8e2s8/Hongdae-Syndrome/blob/main/data/kaggle/houseprice/aims_school_hospital.CSV)
+
+
+## 일반 페이지
+
+::: {.columns}
+
+::: {.column width="100%"}
+![](family.jpg)
+:::
+
+::: {.column width="100%"}
+여러분 저는 율이를 위해 Ames 지역으로 이사를 준비하고 있습니다.<br>
+학교와 병원이 가까운 동네 중 조건이 좋은 집으로 추천해주세요.
+:::
+
+:::
+
+# Ames 동네 분석
+
+## 분할 {height=10%}
+
+```{python}
+#| component: valuebox
+#| title: Neighborhoods
+
+dict(
+  icon = "geo-alt",
+  color = "primary",
+  value = '28개'
+)
+```
+
+```{python}
+#| component: valuebox
+#| title: hospital
+
+dict(
+  icon = "capsule",
+  color = "warning",
+  value = '17개'
+)
+```
+
+```{python}
+#| component: valuebox
+#| title: 'school'
+
+dict(
+  icon = "mortarboard",
+  color = "info",
+  value = '9개'
+)
+```
+
+
+## 분할 {height=auto}
+
+### 분할 2-1
+- 율이를 위해 학교와 병원의 위치 알기
+
+```{python}
+#| title: 'Ames 동네별 학교와 병원 위치'
+print("점 마크 : 집 (동네별로 색 구분), 학교 핀 마크 (darkgreen색), 병원 핀 마크 (orange색)")
+from IPython.display import IFrame
+IFrame('Ames_map.html',width='100%', height='500px')
+```
+
+### 분할 2-2
+- 율이를 위해 학교와 병원이 밀집되어 있는 곳 찾기
+
+#### 탭 {.tabset}
+
+##### 군집화1
+
+```{python}
+#| title: [DBSCAN 군집화 - min_samples=5, eps=0.000266]
+#| padding: 0px
+
+print("군집이 너무 광범위하다")
+print("※회색 : 밀집되지 않은 학교와 병원")
+
+from IPython.display import IFrame
+IFrame('DBSCAN_optimal5_map.html', width='100%', height='500px')
+```
+
+
+##### 군집화2
+
+```{python}
+#| title: [DBSCAN 군집화 - min_samples=4, eps=0.000132]
+#| padding: 0px
+
+print("※회색 : 군집되어 있지 않은 학교와 병원")
+print("각 군집마다 학교와 병원이 골고루 존재한다. 이 군집에 해당하는 집이 좋을 것 같다.")
+from IPython.display import IFrame
+IFrame('DBSCAN_optimal4_map.html', width='100%', height='500px')
+```
+
+##### 군집화3
+
+```{python}
+#| title: '[DBSCAN 군집화 - min_samples=3, eps=0.000083]'
+#| padding: 0px
+
+print("※회색 : 군집되어 있지 않은 학교와 병원")
+print("빨간색 군집은 병원밖에 없고, 파란색 군집에 해당하는 집이 좋을 것 같다.")
+from IPython.display import IFrame
+IFrame('DBSCAN_optimal3_map.html', width='100%', height='500px')
+```
+
+##### 군집화4
+
+```{python}
+#| title: '[DBSCAN 군집화 - min_samples=2, eps=0.000031]'
+#| padding: 0px
+
+print("※회색 : 군집되어 있지 않은 학교와 병원")
+print("너무 최소한의 거리로 군집화를 해서 각 군집에 병원밖에 존재하지 않는다.")
+from IPython.display import IFrame
+IFrame('DBSCAN_optimal2_map.html', width='100%', height='500px')
+```
+
+
+# Ames 동네 선택
+
+## 행 {height=20%}
+
+::: {.columns}
+
+::: {.column width="100%"}
+**학교와 병원이 밀집되어 있는 3곳 선정**<br>
+- 학교와 병원이 밀집되어 있는 곳에서 조건에 맞는 집 찾기<br>
+
+**중요하게 생각하는 요소 :**<br>
+- 집 근처에 학교와 병원이 밀집되어 있는가.<br>
+- 집의 주택의 전반적인 상태 평가가 좋은가.<br>
+- 집의 외관 자재의 현재 상태 평가가 좋은가.<br>
+- 집의 전체 토지 면적이 넓은가.<br>
+- 집의 지상 거주 면적이 넓은가.<br>
+- 집의 지상 침실 수가 많은가.<br>
+- 집의 지상 층의 총 방 개수 (욕실 제외)가 많은가.<br>
+- 집의 차량 수용 능력이 많은가.<br>
+- 집의 진입로 포장 상태가 전면 포장인가.<br>
+- 집의 울타리가 적어도 최소한의 프라이버시 울타리인가.<br>
+- 집의 건축 연도 혹은 리모델링 연도가 최근인가.<br>
+:::
+
+
+::: {.column width="100%"}
+```{python}
+#| title: '학교와 병원이 밀집되어 있는 세 구역'
+#| padding: 0px
+
+from IPython.display import IFrame
+IFrame('select_cluster_map.html', width='200%', height='300px')
+```
+
+:::
+
+:::
+
+## 행 {height=auto}
+
+
+```{python}
+#| title: '군집마다 조건별 가구 현황'
+#| padding: 0px
+
+print('해당 그래프는 각 가구마다 좋은 조건일 수록 높은 점수를 부여한 후, 군집에 묶이지 않은 가구를 제외하고 각 군집마다 가구의 수를 알아본 그래프입니다.')
+
+from IPython.display import IFrame
+IFrame('../code/plotly2.html', width='100%', height='500px')
+```
+
+
+# 선정된 집
+
+## 🏘 조건에 만족하는 집 선정
+집마다 좋은 조건일 수록 높은 점수를 부여하여 높은 점수를 갖는 집 찾기
+
+
+### 점수가 높은 순으로 집 확인
+```{python}
+import pandas as pd
+import numpy as np
+
+score_df = pd.read_csv('../data/score_house.csv')
+score_df = score_df.rename(columns={'Unnamed: 0':'house_index'})
+
+score_df[score_df['cluster']!=-1].sort_values('total',ascending=False)
+```
+
+### 점수가 높으면서 포장도로이면서 최소한의 프라이버시를 지켜주는 울타리가 있는 집으로 확인
+
+```{python}
+import pandas as pd
+import numpy as np
+
+score_df = pd.read_csv('../data/score_house.csv')
+score_df = score_df.rename(columns={'Unnamed: 0':'house_index'})
+
+score_df[(score_df['cluster']!=-1)&((score_df['Fence']=='Minimum_Privacy')|(score_df['Fence']=='Good_Privacy'))&(score_df['Paved_Drive']=='Paved')].sort_values('total',ascending=False)
+```
+
+
+### 선정된 집
+
+```{python}
+from IPython.display import IFrame
+IFrame('../dashboard/selected_house.html', width='100%', height='500px')
+```
+
+
+# 결론
+
+
+## top5 선정된 집의 가격 확인
+![집 가격 분포와 선정된 top5 집의 가격 정도](../code/houseprice.png)
+
+::: {.columns}
+
+::: {.column width="100%"}
+![](../code/oldtown_houseprice.png)
+:::
+
+::: {.column width="100%"}
+![](../code/north_ames_houseprice.png)
+:::
+
+::: {.column width="100%"}
+![](../code/northwest_ames_houseprice.png)
+:::
+
+:::
+
+
+**2등 집이 조건도 좋고, 가격면에서도 좋아 보입니다.**
+
+---
+
+## 2등 집 위치 확인
+
+```{python}
+from IPython.display import IFrame
+IFrame('../dashboard/final_house.html', width='100%', height='500px')
+```

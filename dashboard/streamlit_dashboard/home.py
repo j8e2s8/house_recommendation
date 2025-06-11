@@ -21,8 +21,8 @@ st.write("""
 col1, col2 = st.columns(2)
 
 with col1:
-  st.image('dashboard/family.jpg')
-  st.image('dashboard/house.jpg')
+  st.image('dashboard/img/family.jpg')
+  st.image('dashboard/img/house.jpg')
 
 with col2:
   st.write('''여러분 저는 율이를 위해 Ames 지역으로 이사를 준비하고 있습니다.
@@ -34,7 +34,6 @@ with col2:
   st.write('''
 \n 중요하게 생각하는 요소 : 
 \n \- 집 근처에 학교와 병원이 밀집되어 있는가.
-\n \- 집 근처에 공원·녹지 등이 조성되어 있는가.
 \n \- 집의 주택의 전반적인 상태 평가가 좋은가.
 \n \- 집의 외관 자재의 현재 상태 평가가 좋은가.
 \n \- 집의 전체 토지 면적이 넓은가.

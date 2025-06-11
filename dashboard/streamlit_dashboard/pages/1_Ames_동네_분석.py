@@ -29,7 +29,7 @@ with col1:
     \n점 마크 : 집 (동네별로 색 구분), 
     \n학교 핀 마크 (darkgreen색), 
     \n병원 핀 마크 (orange색)''')
-    with open("dashboard/Ames_map.html", "r", encoding="utf-8") as f:
+    with open("dashboard/img/Ames_map.html", "r", encoding="utf-8") as f:
         st.components.v1.html(f.read(), height=500, scrolling=False)
 
 with col2:
@@ -38,19 +38,19 @@ with col2:
     \n※회색 : 밀집되지 않고 군집에서 낙오된 학교와 병원''')
     tab1, tab2, tab3, tab4 = st.tabs(['군집화1','군집화2','군집화3','군집화4'])
     with tab1:
-        with open("dashboard/DBSCAN_optimal5_map.html", "r", encoding="utf-8") as f:
+        with open("dashboard/img/DBSCAN_optimal5_map.html", "r", encoding="utf-8") as f:
             st.write('하이퍼 파라미터 : min_samples=5, eps=0.000266')
             st.components.v1.html(f.read(), height=400, scrolling=False)
     with tab2:
-        with open("dashboard/DBSCAN_optimal4_map.html", "r", encoding="utf-8") as f:
+        with open("dashboard/img/DBSCAN_optimal4_map.html", "r", encoding="utf-8") as f:
             st.write('하이퍼 파라미터 : min_samples=4, eps=0.000132')
             st.components.v1.html(f.read(), height=400, scrolling=False)
     with tab3:
-        with open("dashboard/DBSCAN_optimal3_map.html", "r", encoding="utf-8") as f:
+        with open("dashboard/img/DBSCAN_optimal3_map.html", "r", encoding="utf-8") as f:
             st.write('하이퍼 파라미터 : min_samples=3, eps=0.000083')
             st.components.v1.html(f.read(), height=400, scrolling=False)
     with tab4:
-        with open("dashboard/DBSCAN_optimal2_map.html", "r", encoding="utf-8") as f:
+        with open("dashboard/img/DBSCAN_optimal2_map.html", "r", encoding="utf-8") as f:
             st.write('하이퍼 파라미터 : min_samples=2, eps=0.000031')
             st.components.v1.html(f.read(), height=400, scrolling=False)
 

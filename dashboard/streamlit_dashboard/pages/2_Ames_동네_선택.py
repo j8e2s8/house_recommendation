@@ -23,7 +23,6 @@ with col1:
     with st.expander('중요하게 생각하는 요소'):
         st.write('''
         \- 집 근처에 학교와 병원이 밀집되어 있는가.
-        \n \- 집 근처에 공원·녹지 등이 조성되어 있는가.
         \n \- 집의 주택의 전반적인 상태 평가가 좋은가.
         \n \- 집의 외관 자재의 현재 상태 평가가 좋은가.
         \n \- 집의 전체 토지 면적이 넓은가.
@@ -37,7 +36,7 @@ with col1:
             ''')
 
 with col2:
-    with open("dashboard/DBSCAN_optimal4_map.html", "r", encoding="utf-8") as f:
+    with open("dashboard/img/select_cluster_map.html", "r", encoding="utf-8") as f:
         st.components.v1.html(f.read(), height=300, scrolling=False)
 
 
@@ -121,9 +120,9 @@ st.subheader('[plotly 시각화] 군집마다 조건별 가구 현황')
 
 st.write('''
 plotly 그래프로 알아보기
-\n해당 그래프는 좋은 조건일 수록 높은 점수를 부여한 후 군집에 묶이지 않은 가구를 제외하고 각 군집마다 가구의 수를 알아본 그래프입니다.
+\n해당 그래프는 각 가구마다 좋은 조건일 수록 높은 점수를 부여한 후, 군집에 묶이지 않은 가구를 제외하고 각 군집마다 가구의 수를 알아본 그래프입니다.
 ''')
-with open('code/plotly2.html','r',encoding='utf-8') as f:
+with open('dashboard/img/plotly2.html','r',encoding='utf-8') as f:
     st.components.v1.html(f.read(), height=800, scrolling=False)
 
 
