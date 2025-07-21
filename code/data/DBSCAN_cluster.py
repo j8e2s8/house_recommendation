@@ -14,7 +14,7 @@ from IPython.display import display
 
 # 데이터 불러오기
 house_df = pd.read_csv('../data/raw/houseprice-with-lonlat.csv')
-school_hospital_df = pd.read_csv('../data/raw/aims_school_hospital')
+school_hospital_df = pd.read_csv('../data/raw/aims_school_hospital.csv')
 
 
 # -------------------------- DBSCAN의 각 min_samples 마다 최적의 eps 구하기

@@ -4,7 +4,7 @@ import os
 
 
 # 데이터 불러오기
-house_df = pd.read_csv('data/eda_house.csv')
+house_df = pd.read_csv('../data/eda_house.csv')
 
 # 관심 있는 조건 : 
 # Bedroom_AbvGr, TotRms_AbvGrd, Gr_Liv_Area, Garage_Cars 수치가 큰 곳

@@ -27,6 +27,7 @@ st.write(score_df[(score_df['cluster']!=-1)&((score_df['Fence']=='Minimum_Privac
 
 # -----------
 st.subheader('선정된 집 확인')
+st.write('점 핀을 클릭하여 top5 집 정보를 확인하세요.')
 with open('dashboard/img/selected_house.html','r',encoding='utf-8') as f:
     st.components.v1.html(f.read(), height=800, scrolling=False)
 
