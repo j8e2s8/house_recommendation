@@ -15,6 +15,8 @@ score_df = pd.read_csv('data/score_house.csv')
 score_df = score_df.sort_values('total',ascending=False)
 #school_hospital_df.head(5)
 
+school_hospital_df.head()
+
 # 지역 수 확인 : 28개
 house_df.columns
 len(house_df['Neighborhood'].unique())

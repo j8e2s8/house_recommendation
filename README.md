@@ -16,90 +16,57 @@
 
 ## 📝 데이터 소개
 
-미국 아이오와주 Ames 시의 주택 거래 데이터 : 79개의 설명 변수와 1개의 목표 변수(SalePrice)로 구성
-MSSubClass: 주택 유형을 나타내는 숫자 코드
-MSZoning: 일반적인 구역 분류를 나타냅니다.
-LotFrontage: 도로와 접한 거리(피트 단위)
-LotArea: 대지 면적(평방 피트 단위)
-Street: 도로 접근 유형
-Alley: 골목 접근 유형
-LotShape: 대지 형태
-LandContour: 대지의 평탄도
-Utilities: 이용 가능한 공공 설비
-LotConfig: 대지 구성
-LandSlope: 대지의 경사도
-Neighborhood: Ames 시 내의 물리적 위치
-Condition1: 주요 도로 또는 철도와의 근접성
-Condition2: 두 번째 주요 도로 또는 철도와의 근접성
-BldgType: 주택 유형
-HouseStyle: 주택 스타일
-OverallCond: 전반적인 상태 평가
-YearBuilt: 원래 건축 연도
-YearRemodAdd: 리모델링 또는 증축 연도
-RoofStyle: 지붕 스타일
-RoofMatl: 지붕 재료
-Exterior1st: 외부 마감재(첫 번째)
-Exterior2nd: 외부 마감재(두 번째)
-MasVnrType: 석조 베니어 유형
-MasVnrArea: 석조 베니어 면적(평방 피트 단위)
-ExterCond: 외부 재료의 현재 상태
-Foundation: 기초 유형
-BsmtCond: 지하실 전반적인 상태
-BsmtExposure: 지하실 노출 유형
-BsmtFinType1: 지하실 마감 유형 1
-BsmtFinSF1: 지하실 마감 면적 1(평방 피트 단위)
-BsmtFinType2: 지하실 마감 유형 2
-BsmtFinSF2: 지하실 마감 면적 2(평방 피트 단위)
-BsmtUnfSF: 지하실 미마감 면적(평방 피트 단위)
-TotalBsmtSF: 지하실 총 면적(평방 피트 단위)
-Heating: 난방 유형
-HeatingQC: 난방 품질 및 상태
-CentralAir: 중앙 에어컨 유무
-Electrical: 전기 시스템
-FirstFlrSF: 1층 면적(평방 피트 단위)
-SecondFlrSF: 2층 면적(평방 피트 단위)
-GrLivArea: 지상 생활 면적(평방 피트 단위)
-BsmtFullBath: 지하실 전체 욕실 수
-BsmtHalfBath: 지하실 반 욕실 수
-FullBath: 전체 욕실 수
-HalfBath: 반 욕실 수
-BedroomAbvGr: 지상 침실 수
-KitchenAbvGr: 지상 주방 수
-TotRmsAbvGrd: 지상 총 방 수(욕실 제외)
-Functional: 주택 기능성 등급
-Fireplaces: 벽난로 수
-GarageType: 차고 유형
-GarageFinish: 차고 내부 마감 상태
-GarageCars: 차고 차량 수용 능력
-GarageArea: 차고 면적(평방 피트 단위)
-GarageCond: 차고 상태
-PavedDrive: 포장된 진입로 유무
-WoodDeckSF: 목재 데크 면적(평방 피트 단위)
-OpenPorchSF: 오픈 포치 면적(평방 피트 단위)
-EnclosedPorch: 밀폐된 포치 면적(평방 피트 단위)
-Three_season_porch: 3계절 포치 면적(평방 피트 단위)
-ScreenPorch: 스크린 포치 면적(평방 피트 단위)
-PoolArea: 수영장 면적(평방 피트 단위)
-PoolQC: 수영장 품질
-Fence: 울타리 품질
-MiscFeature: 기타 특징
-MiscVal: 기타 특징의 가치
-MoSold: 판매된 월
-YearSold: 판매된 연도
-SaleType: 판매 유형
-SaleCondition: 판매 조건
-SalePrice: 판매 가격
-Longitude: 경도
-Latitude: 위도
+### 🔹 데이터 출처
+- [Ames Housing Dataset 경로] data/raw/houseprice-with-lonlat.csv
+- 아이오와주 Ames 시의 주택 거래 정보와 경도 위도를 담은 공개 데이터셋
+- 총 **2,930개 주택**에 대한 **75개 변수** 포함
+
+- [Ames Hospital, School Dataset 경로] data/raw/aims_school_hospital.csv
+- 아이오와주 Ames 시의 병원과 학교의 경도 위도를 담은 공개 데이터셋
+- 총 **26개 주택**에 대한 **4개 변수** 포함
+
+### 🔹 주요 변수 설명
+- houseprice-with-lonlat.csv 
+| 변수명           | 설명                    | 예시        |
+|-----------------|------------------------|-------------|
+| `SalePrice`     | 주택 판매 가격           | 215000      |
+| `Bedroom_AbvGr` | 지상 침실 수             | 3           |
+| `TotRms_AbvGrd` | 지상 총 방 수            | 7           |
+| `Garage_Cars`   | 차량 수용 능력           | 2           |
+| `Overall_Cond`  | 주택의 전반적인 상태 평가  | Average     |
+| `Exter_Cond`    | 외관 자재의 현재 상태 평가 | Typical     |
+| `Gr_Liv_Area`   | 지상 거주 면적 (피트)     | 1656         |
+| `Year_Remod_Add`| 리모델링 또는 증축 연도    | 1960        |
+| `Paved_Drive`   | 진입로 포장 상태          | Paved       |
+| `Fence`         | 울타리 품질              | No_Fence     |
+| `Neighborhood`  | Ames 시내의 지역 이름     | North_Ames   |
+| `Latitude`      | 주택의 위도              | 42.054035    |
+| `Longitude`     | 주택의 경도              | -93.619754   |
+ 
+- aims_school_hospital.csv
+| 변수명      | 설명              | 예시                          |
+|------------|------------------|-------------------------------|
+| `Name`     | 학교 혹은 병원 이름 | Thielen Student Health Cente  |
+| `type`     | 학교 or 병원       | medical                      |
+| `Latitude` | 건물의 위도        | 42.025756                     |
+| `Longitude`| 건물의 경도        | -93.653895                    |
+
+### 🔹 주요 전처리 내용
+- 파생 변수 생성: 'Overall_Cond', 'Exter_Cond' 범주 변수를 주거 점수 산정용으로 사용하기 위해 수치화하고, 'Bedroom_AbvGr', 'TotRms_AbvGrd' 등을 포함하여 총 주거 점수 정규화한 변수 생성.
+
 
 ---
 
 ## 🧠 주요 기술 스택
+- DBSCAN을 이용한 군집화
+- folium, plotly, streamlit을 이용한 시각화
 
 ---
 
 ## 📊 결과 요약
+- Old Town에 있는 $184900 가격의 집을 추천함.
 
 ---
 
 ## 📢 실행 방법
+- streamlit : https://houserecommendation-dashboard.streamlit.app/
