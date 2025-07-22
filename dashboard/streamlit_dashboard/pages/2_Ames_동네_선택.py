@@ -19,20 +19,19 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader('학교와 병원이 밀집되어 있는 3곳 선정')
-    st.write('학교와 병원이 밀집되어 있는 곳에서 조건에 맞는 집 찾기')
+    st.write('학교와 병원이 밀집되어 있는 곳에서 조건에 맞는 주택 찾기')
     with st.expander('중요하게 생각하는 요소'):
         st.write('''
-        \- 집 근처에 학교와 병원이 밀집되어 있는가.
-        \n \- 집의 주택의 전반적인 상태 평가가 좋은가.
-        \n \- 집의 외관 자재의 현재 상태 평가가 좋은가.
-        \n \- 집의 전체 토지 면적이 넓은가.
-        \n \- 집의 지상 거주 면적이 넓은가.
-        \n \- 집의 지상 침실 수가 많은가.
-        \n \- 집의 지상 층의 총 방 개수 (욕실 제외)가 많은가.
-        \n \- 집의 차량 수용 능력이 많은가.
-        \n \- 집의 진입로 포장 상태가 전면 포장인가.
-        \n \- 집의 울타리가 적어도 최소한의 프라이버시 울타리인가.
-        \n \- 집의 건축 연도 혹은 리모델링 연도가 최근인가.
+        \- 주택 근처에 학교와 병원이 밀집되어 있는가.
+        \n \- 주택의 전반적인 상태 평가가 좋은가.
+        \n \- 주택의 외관 자재의 현재 상태 평가가 좋은가.
+        \n \- 주택의 지상 거주 면적이 넓은가.
+        \n \- 주택의 지상 침실 수가 많은가.
+        \n \- 주택의 지상 층의 총 방 개수 (욕실 제외)가 많은가.
+        \n \- 주택의 차량 수용 능력이 좋은가.
+        \n \- 주택의 진입로 포장 상태가 전면 포장인가.
+        \n \- 주택의 울타리가 적어도 최소한의 프라이버시 울타리인가.
+        \n \- 주택의 건축 연도 혹은 리모델링 연도가 최근인가.
             ''')
 
 with col2:
@@ -74,7 +73,7 @@ button5 = st.sidebar.button('지상 거주 면적')
 button6 = st.sidebar.button('리모델링 연도')
 button7 = st.sidebar.button('진입 도로 유형')
 button8 = st.sidebar.button('울타리 유형')
-button9 = st.sidebar.button('점수 높은 집')
+button9 = st.sidebar.button('점수 높은 주택')
 
 
 col = ['Bedroom_AbvGr', 'TotRms_AbvGrd', 'Garage_Cars', 'Overall_Cond','Exter_Cond', 'g_grlivarea', 'Year_Remod_Add', 'Paved_Drive', 'Fence', 'total']

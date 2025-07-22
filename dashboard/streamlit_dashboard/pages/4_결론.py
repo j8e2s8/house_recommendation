@@ -7,10 +7,11 @@ st.title("💡 결론")
 
 st.write('---')
 
-st.header('top5 선정된 집의 가격 확인')
+st.header('top5 선정된 주택의 가격 확인')
 
-st.image("dashboard/img/houseprice.png", caption="집 가격 분포와 선정된 top5 집의 가격 정도")
-
+st.image("dashboard/img/houseprice.png", caption="주택 가격 분포와 선정된 top5 주택의 가격 정도")
+st.write('')
+st.write('')
 
 col1, col2, col3 = st.columns(3)
 
@@ -23,11 +24,11 @@ with col2:
 with col3:
     st.image("dashboard/img/northwest_ames_houseprice.png")
 
-st.write('**2등 집이 조건도 좋고, 가격면에서도 좋아 보입니다.**')
+st.write('**2등 주택이 조건도 좋고, 가격면에서도 좋아 보입니다.**')
 
 st.write('---')
 
-st.header('2등 집 위치 확인')
-st.write('점 핀을 클릭하여 2등 집 정보를 확인하세요.')
+st.header('2등 주택 위치 확인')
+st.write('점 마크를 클릭하여 2등 주택 정보를 확인하세요.')
 with open('dashboard/img/final_house.html','r',encoding='utf-8') as f:
     st.components.v1.html(f.read(), height=800, scrolling=False)
