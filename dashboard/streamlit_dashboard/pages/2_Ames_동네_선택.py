@@ -39,12 +39,15 @@ with col2:
         st.components.v1.html(f.read(), height=300, scrolling=False)
 
 
+st.write('')
+st.write('')
+st.write('')
 
 # --------------------------------- streamlit
 st.write('### [streamlit 시각화] 사이드바 버튼 상호작용 그래프')
 st.write('''
 streamlit 그래프로 알아보기 - 사이드 바에서 조건을 설정하세요.
-\n해당 그래프는 설정한 조건에 해당하는 가구 수를 알아보는 그래프입니다.
+\n해당 그래프는 설정한 조건의 가구 수를 알아보는 그래프입니다.
 ''')
 
 select0 = st.sidebar.checkbox('군집0')
@@ -94,25 +97,27 @@ if buttons[0] == 'g_grlivarea':
     eda_df['g_grlivarea'] = pd.Categorical(eda_df['g_grlivarea'], categories=['(0, 500]', '(500, 1000]', '(1000, 1500]', '(1500, 2000]', '(2000, 2500]', '(2500, 3000]', '(3000, 3500]', '(3500, 4000]', '(4000, 4500]', '(4500, 5000]', '(5000, 5500]', '(5500, 6000]'])
     g2 = pd.DataFrame(eda_df[eda_df['cluster'].isin(selected)].value_counts(['g_grlivarea','cluster']))
     pivot_df2 = g2.pivot_table(index=buttons[0], columns='cluster', values='count')
-    st.bar_chart(pivot_df2, height=500)
+    st.bar_chart(pivot_df2, height=300)
 elif buttons[0] == 'Year_Remod_Add':
     g3 = eda_df[eda_df['cluster'].isin(selected)].groupby([buttons[0],'cluster'], as_index=False).agg(counts=(buttons[0],'count'))
     pivot_df3 = g3.pivot_table(index=buttons[0],columns='cluster',values='counts')
-    st.line_chart(pivot_df3, height=500)
+    st.line_chart(pivot_df3, height=300)
 elif buttons[0] == 'total':
     g4 = score_df[(score_df['cluster'].isin(selected)) & (score_df['Paved_Drive']=='Paved')& ((score_df['Fence']=='Good_Privacy') | (score_df['Fence']=='Minimum_Privacy'))].sort_values('total',ascending=False).head(7).reset_index(drop=True)
     pivot_df4 = g4.pivot_table(index='Unnamed: 0', columns='cluster', values='total').sort_values(0,ascending=False)
     pivot_df4.index.name = 'index'
     pivot_df4['max_score'] = pivot_df4.max(axis=1)
     pivot_df4 = pivot_df4.sort_values('max_score', ascending=False).drop(columns='max_score')
-    st.bar_chart(pivot_df4, height=500)
+    st.bar_chart(pivot_df4, height=300)
 else:
     g1 = eda_df[eda_df['cluster'].isin(selected)].groupby([buttons[0],'cluster'], as_index=False).size()
     pivot_df1 = g1.pivot_table(index=buttons[0],columns='cluster',values='size')
-    st.bar_chart(pivot_df1, height=500)
+    st.bar_chart(pivot_df1, height=300)
 
 
-
+st.write('')
+st.write('')
+st.write('')
 
 # ------------------------------------ plotly
 st.subheader('[plotly 시각화] 군집마다 조건별 가구 현황')
