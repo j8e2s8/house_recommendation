@@ -33,6 +33,8 @@ with col1:
         \n \- 주택의 울타리가 적어도 최소한의 프라이버시 울타리인가.
         \n \- 주택의 건축 연도 혹은 리모델링 연도가 최근인가.
             ''')
+        
+    st.write('빨간색 : 군집0 , 파란색 : 군집1, 보라색 : 군집2')
 
 with col2:
     with open("dashboard/img/select_cluster_map.html", "r", encoding="utf-8") as f:
@@ -46,9 +48,10 @@ st.write('')
 # --------------------------------- streamlit
 st.write('### [streamlit 시각화] 사이드바 버튼 상호작용 그래프')
 st.write('''
-streamlit 그래프로 알아보기 - 사이드 바에서 조건을 설정하세요.
+streamlit 그래프로 알아보기 - 사이드 바에서 군집과 관심 주제를 설정하세요.
 \n해당 그래프는 설정한 조건의 가구 수를 알아보는 그래프입니다.
 ''')
+st.write('초기 설정 : 군집 0 의 침실 수 막대 그래프')
 
 select0 = st.sidebar.checkbox('군집0')
 select1 = st.sidebar.checkbox('군집1')
@@ -123,7 +126,7 @@ st.write('')
 st.subheader('[plotly 시각화] 군집마다 조건별 가구 현황')
 
 st.write('''
-plotly 그래프로 알아보기
+plotly 그래프로 알아보기 - 아래 그래프의 왼쪽 버튼을 선택해주세요. 그래프 위에 마우스를 가져다 대면 값을 확인할 수 있습니다.
 \n해당 그래프는 각 가구마다 좋은 조건일 수록 높은 점수를 부여한 후, 군집에 묶이지 않은 가구를 제외하고 각 군집마다 가구의 수를 알아본 그래프입니다.
 ''')
 with open('dashboard/img/plotly2.html','r',encoding='utf-8') as f:
