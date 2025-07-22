@@ -29,12 +29,12 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("Ames 동네별 학교와 병원의 위치")
-    st.write('''**율이를 위해 학교와 병원의 위치 알기**
-    \n 
-    \n점 마크 : 주택 (동네별로 색 구분), 
+    st.write('**율이를 위해 학교와 병원의 위치 알기**')
+    st.write('')
+    st.write('''점 마크 : 주택 (동네별로 색 구분), 
     \n학교 핀 마크 : 교육기관 (darkgreen색), 
-    \n병원 핀 마크 : 의료기관 (orange색)
-    \n ''')
+    \n병원 핀 마크 : 의료기관 (orange색)''')
+    st.write('')
     with open("dashboard/img/Ames_map.html", "r", encoding="utf-8") as f:
         st.components.v1.html(f.read(), height=500, scrolling=False)
 
