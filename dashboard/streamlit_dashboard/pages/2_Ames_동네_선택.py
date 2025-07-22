@@ -34,7 +34,9 @@ with col1:
         \n \- 주택의 건축 연도 혹은 리모델링 연도가 최근인가.
             ''')
         
-    st.write('빨간색 : 군집0 \n파란색 : 군집1 \n보라색 : 군집2')
+    st.write('''빨간색 : 군집0 
+             \n파란색 : 군집1 
+             \n보라색 : 군집2''')
 
 with col2:
     with open("dashboard/img/select_cluster_map.html", "r", encoding="utf-8") as f:
