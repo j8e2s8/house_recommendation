@@ -31,4 +31,4 @@ st.write('---')
 st.header('2등 주택 위치 확인')
 st.write('점 마크를 클릭하여 2등 주택 정보를 확인하세요.')
 with open('dashboard/img/final_house.html','r',encoding='utf-8') as f:
-    st.components.v1.html(f.read(), height=800, scrolling=False)
+    st.components.v1.html(f.read(), height=500, scrolling=False)

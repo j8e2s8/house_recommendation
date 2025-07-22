@@ -37,7 +37,7 @@ st.write('')
 
 # -----------
 st.subheader('선정된 주택 확인')
-st.write('점 마크를 클릭하여 top5 주택 정보를 확인하세요.')
+st.write('점 마크를 클릭하여 top5 주택 정보를 확인하세요. top5만 주택 사진을 확인하실 수 있습니다.')
 with open('dashboard/img/selected_house.html','r',encoding='utf-8') as f:
     st.components.v1.html(f.read(), height=500, scrolling=False)
 
