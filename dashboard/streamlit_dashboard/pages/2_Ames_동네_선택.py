@@ -18,9 +18,9 @@ st.write('---')
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader('학교와 병원이 밀집되어 있는 3곳 선정')
-    st.write('학교와 병원이 밀집되어 있는 곳에서 조건에 맞는 주택 찾기')
-    with st.expander('중요하게 생각하는 요소'):
+    st.subheader('선정된 학교와 병원이 밀집되어 있는 곳')
+    st.write('학교와 병원이 밀집되어 있는 곳에서 조건에 맞는 주택은 어딜까?')
+    with st.expander('중요하게 생각하는 조건 확인'):
         st.write('''
         \- 주택 근처에 학교와 병원이 밀집되어 있는가.
         \n \- 주택의 전반적인 상태 평가가 좋은가.
@@ -34,10 +34,7 @@ with col1:
         \n \- 주택의 건축 연도 혹은 리모델링 연도가 최근인가.
             ''')
         
-    st.write('''빨간색 : 군집0 
-             \n파란색 : 군집1 
-             \n보라색 : 군집2''')
-
+    st.write('※ 군집0(빨간색), 군집1(파란색), 군집2(보라색)')
 with col2:
     with open("dashboard/img/select_cluster_map.html", "r", encoding="utf-8") as f:
         st.components.v1.html(f.read(), height=300, scrolling=False)
